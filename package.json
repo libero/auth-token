@@ -21,7 +21,7 @@
       "pre-commit": "yarn lint"
     }
   },
-  "author": "",
+  "author": "libero-npm@elifesciences.org",
   "license": "MIT",
   "dependencies": {
     "@types/jsonwebtoken": "^8.3.3",
