@@ -1,28 +1,30 @@
 language: node_js
 stages:
-  - test
-  - deploy
+- test
+- deploy
 jobs:
   include:
-    - stage: test
-      name: Test
-      node_js:
-        - 10.16.3
-      script: yarn test
-
-    - stage: deploy
-      if:
-        tag IS present
-      name: Deploy
-      script: yarn build
-      node_js:
-        - 10.16.3
-      deploy:
-        provider: npm
-        skip_cleanup: true
-        email: libero-npm@elifesciences.org
-        api_key:
-          secure: [CHANGE ME]
-        on:
-          tags: true
-          branch: master
+  - stage: test
+    name: Test
+    node_js:
+    - 10.16.3
+    script: yarn test
+  - stage: deploy
+    if: tag IS present
+    name: Deploy
+    script: yarn build
+    node_js:
+    - 10.16.3
+    deploy:
+      provider: npm
+      skip_cleanup: true
+      email: libero-npm@elifesciences.org
+      api_key:
+        secure:
+        - CHANGE ME
+      on:
+        tags: true
+        branch: master
+deploy:
+  api_key:
+    secure: Ub/zvRAvdh3CuWY3Ze8r6z5lC0YywBsdvIg2ZQEHJmTb8xMcmKBkLtQ/jBcrLOo/Djoig6zPy7ujmT7Ha5QlMWALMV78zD1eaoNtNEBNqDQlqiqrQaD8zSnXn77ypdhe4orE2xbEXkbpLh1QR++UXd72MMELB6fCD2SJeatFmb3V2CjlbidbVc8RMibzz5bVchg3eInI8oPDcgagAC9GW960cuoZ2C0NPJZit3aQ0dGRg9R4KG5v50ubLPkE4CAZrNbf2twTPrOlVQRmJSD68K6EDQaZ1GqiVgp6LUw4u4XYwRilHwsnI5Wc8Ob4YdWwTPFRFCFBsQo+5x9SWaPZMrOvCR7aCv9e5+Ic8elXIn4Wm/4KavecL51F4ZF19KP7URWh6lQnHuA8PH5DXlW/o85ILClFsMCo95Ze0CuxpuNiVSkrvBziyPG90XD3aTsHqJAkuQwqJC0RvowjaFCoP3cOicNOUpxw0W1LNfVy5Vkyg36GipnQBb/Yk+LccObK64+trl936JmNqKXIZ/etu5W0avM8Vl+5k7hBhxP2n3Ts5OZBlKTs1EkeMsOi7jAUz+XcEli0w4yhV7Qh4KScBgTRHJGvTKrkPgGH2HFdfygJtrJjiIcCDZxxYGkqAad5DpYZIlLruxc4g9X4iXdI3jmnqNv9pxajMKWxu2WDx7Q=
