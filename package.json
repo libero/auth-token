@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc --build tsconfig.json",
+    "build": "tsc",
     "lint": "tslint --project tsconfig.json",
     "postinstall": "npm run build"
   },
