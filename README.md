@@ -1,3 +1,3 @@
-# `auth-utils`
+# `auth-token`
 
-This will contain common code and types for performing basic auth
+The specification for the libero authentication token

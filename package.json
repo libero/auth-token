@@ -1,5 +1,5 @@
 {
-  "name": "@libero/auth-utils",
+  "name": "@libero/auth-token",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/libero/auth-utils"
+    "url": "https://github.com/libero/auth-token"
   },
   "husky": {
     "hooks": {
