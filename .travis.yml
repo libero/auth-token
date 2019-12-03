@@ -10,7 +10,6 @@ jobs:
         - 10.16.3
       script:
         - yarn lint
-        - yarn test
 
     - stage: deploy
       if:
