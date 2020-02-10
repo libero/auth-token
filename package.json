@@ -41,5 +41,8 @@
     "prettier": "^1.19.1",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=12.15.0"
   }
 }
